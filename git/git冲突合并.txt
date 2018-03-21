@@ -1,0 +1,21 @@
+﻿git pull 之后有冲突:
+
+$ git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From g:/software/repository/git/itheima26
+   50db030..a04027a  master     -> origin/master
+Auto-merging readme.txt
+CONFLICT (content): Merge conflict in readme.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+解决方法:
+1.git mergetool
+	调用上面命令之后会提示你输入编辑方法,输入:beyond compare 进入编辑器.
+
+2.编辑完之后.调用git commit -a 把当前目录中所有都提交到本地库中.
+
+3.git push origin master 提交到远程库中.

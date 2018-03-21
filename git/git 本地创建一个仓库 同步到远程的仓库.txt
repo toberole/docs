@@ -1,0 +1,21 @@
+#Command line instructions
+Git global setup
+
+git config --global user.name "xiaoge"
+git config --global user.email "xiaoge@xiyou3g.com"
+
+#Create demo new repository
+git clone https://git.xiyoumobile.com/xiaoge/demo.git
+cd demo
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+#Existing folder or Git repository
+cd existing_folder
+git init
+git remote add [origin 本地别名] https://git.xiyoumobile.com/xiaoge/a.git
+git add .
+git commit
+git push -u origin master

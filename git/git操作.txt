@@ -1,0 +1,63 @@
+﻿/////////////////////////////////
+origin远程仓库，master本地分支
+注意：在commit提交之后，必须push才能同步到主分支
+
+基本操作步骤：[顺序不能乱]
+一：add，将文件纳入控制之中
+二：commit，提交到本地缓存，每次修改了文件 在push之前也必须commit，否则无法push
+三：push，推送到主分支
+
+/////////////////////////////////
+git add file # 将制定文件提交暂存区
+git add . # 将所有修改过的工作文件提交暂存区
+git commit -m message # 带有message的提交
+git push
+
+git fetch origin # 抓取远程仓库
+
+一、Git fetch origin master # 抓取远程仓库到本地
+二、git diff origin master # 比较一下主分支与本地分支之间的区别
+三、git merge origin/master # 合并远程主分支与本地分支
+
+////////////////////////
+在本地修改了代码，提交步骤：
+一：git commit -a -m "msg"
+二：git push
+		正常就提交成功了，失败了一般是冲突[远程文件在本地提交之前已经修改了]
+
+在使用git bash在提交的时候，如果失败，一般都是冲突导致的:
+冲突情况：
+一：同一行冲突
+二：非同一行冲
+
+冲突处理：
+		先fetch把主分支的拉下来[注意：千万别直接pull，这样会很危险，
+因为pull是把主分支的拉下来，然后直接合并]，
+比较一下是哪些地方冲突了，然后合并解决冲突[做一个pull的操作]，再在合并之后的文件
+上调一下顺序[合并之后代码的逻辑不能乱了]
+调好顺序之后，就可以提交了
+步骤:
+一：git fetch origin master # 抓取主分支的本地分支，为了下一步比较哪有有变化
+二：git diff origin master # 比较主分支与本地分支的区别
+三：git merge origin master，合并之后，需要调一下代码的顺序[看一下代码逻辑等等问题]
+四：git commit -a -m msg
+五：git push
+小技巧：在本地编写代码可以直接pull[拉取服务器代码]，如果有冲突，就会有提醒解决冲突；如果没有
+就直接合并了，然后就可以直接commit
+
+commit之后，用diff可以查看修改的文件与远程文件的区别  
+
+
+1 mkdir learngit：
+2 git init ：
+3 git add readme.txt：
+4 git commit -m"this is readme.txt："
+5 git log：
+6 git log --pretty=oneline：
+7 git reset --hard HEAD^：
+8 git reset --hard HEAD~100： 
+9 git reflog：
+
+
+ 
+git log -n 1 -p #查看最近一次提交所有更改的细节

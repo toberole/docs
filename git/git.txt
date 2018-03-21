@@ -1,0 +1,24 @@
+username：zhouwei11
+pwd：gnUwSlk2mW2B
+
+http://gitlab.58corp.com/
+
+http://gitlab.58corp.com/groups/spat-im   im项目组项目
+
+
+https://git.oschina.net/dashboard/projects  码云
+
+
+
+Error:(25, 0) Could not get unknown property 
+'WChatStorePassword' for SigningConfig_Decorated
+{name=release, storeFile=D:\projects\keystore.jks, storePassword=null, keyAlias=null, 
+keyPassword=null, storeType=D:\projects\keystore.jks} of type 
+com.android.build.gradle.internal.dsl.SigningConfig.
+<a href="openFile:D:\projects\wchat-android\WChatApp\build.gradle">Open File</a>
+
+D:\projects\keystore.jks
+
+storeFile file('../../keystore.jks')
+
+https://segmentfault.com/a/1190000002439306
