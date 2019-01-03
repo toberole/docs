@@ -2,6 +2,9 @@
 origin远程仓库，master本地分支
 注意：在commit提交之后，必须push才能同步到主分支
 
+// 创建本地分支dev 并且关联到远程的dev分支
+git checkout -b dev origin/dev
+
 基本操作步骤：[顺序不能乱]
 一：add，将文件纳入控制之中
 二：commit，提交到本地缓存，每次修改了文件 在push之前也必须commit，否则无法push
