@@ -24,10 +24,10 @@ git fetch origin # 抓取远程仓库
 
 ***********************************************
 
-<<<<<<< HEAD 本地的代码
-hello
-======= 服务器的代码
-hello first
+<<<<<<< HEAD 
+hello 本地的代码
+======= 
+hello first 服务器的代码
 >>>>>>> 16db07927ef1fb44ddee026a8a1a6a84fcfcbab6
 
 
